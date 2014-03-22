@@ -1,0 +1,25 @@
+#
+# (C) 2014 KATO Takeshi
+#
+
+sources = (
+    'main.cc',
+    'misc.cc',
+    'mt_elem.cc',
+    'mt_key.cc',
+    'mt_node.cc',
+    'mtpath.cc',
+    'mtpath.l',
+    'mtpath.y',
+    'mttxt.l',
+    'mttxt.y',
+    'path_hop.cc',
+)
+
+def build(x):
+	x(
+	    features='cxx cxxprogram',
+	    source=sources,
+	    target='../mt',
+	    includes='.'
+	)
